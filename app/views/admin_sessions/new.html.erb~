@@ -1,0 +1,26 @@
+<% title 'Login Please' %>
+
+<% form_for @admin_session, :url => admin_sessions_path do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :author %><br/>
+    <%= f.text_field :author %>
+  </p>
+
+  <p>
+    <%= f.label :thoughts %><br/>
+    <%= f.text_area :thoughts %>
+  </p>
+
+  <p>
+    <%= f.label :rating %><br/>
+    <%= f.number_field :rating %>
+  </p>
+
+  <%= f.submit "Login" %>
+<% end %>

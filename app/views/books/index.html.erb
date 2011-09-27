@@ -1,0 +1,13 @@
+<% title 'My Books' %>
+
+<% for book in @books do %>
+  <h2>Title: <%=link_to(h(book.title), book_path(book)) %></h2>
+  <h3>Author: <%=h book.author %></h3>
+  <%= simple_format(truncate(book.thoughts, :length => 75)) %>
+  <h4>RATING: <%=h book.rating %></h4>
+<% end %>
+<%= will_paginate @books %>
+
+<% if current_admin %>
+  <p> <%=link_to t('book.new_book'), new_book_path %></p>
+<% end %>

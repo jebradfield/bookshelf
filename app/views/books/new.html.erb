@@ -1,0 +1,23 @@
+<% form_for(@book) do |form| %>
+  <p>
+    <%= form.label :title %><br/>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :author %><br/>
+    <%= form.text_field :author %>
+  </p>
+
+  <p>
+    <%= form.label :thoughts %><br/>
+    <%= form.text_area :thoughts %>
+  </p>
+
+  <p>
+    <%= form.label :rating %><br/>
+    <%= form.number_field :rating %>
+  </p>
+
+  <%= form.submit %>
+<% end %>
